@@ -3,7 +3,7 @@ h1,h2,h3,h4,h5,figure,p,ol,ul {
 }
   
 ol,ul {
-    list-style: none;
+    list-style:circle;
     padding-inline: 0;
 }
   
@@ -16,7 +16,7 @@ body{
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    /* padding: 90px; */
 }
 
 .plus_circle {
@@ -28,5 +28,4 @@ body{
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
-    /* border: 2px solid #000; */
 }  

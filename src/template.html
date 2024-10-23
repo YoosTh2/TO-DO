@@ -8,20 +8,93 @@
 
 </head>
 <body class="bg-amber-200">
-  <h1 >
-    
-  </h1>
-  <div id="container" class="h-screen flex justify-center items-center">
-    <div id="todoBody" class="flex flex-col w-1/2 h-2/5 bg-amber-300 justify-center items-center">
-      <h2 class="text-3xl font-bold">To-Do list📝</h2>
-        <div class="input_a flex flex-row">
-          <input type="text" id="todo_text" class="todo_input bg-zinc-200 outline-none px-2.5 flex-1" placeholder="add your input here">
-          <a id="add_plus_btn" role="button" class="plus_circle flex flex-col ">+</a>
+  <h1 class="title">TO-DO Listooooooo</h1>
+  <div class="all_tasks">
+    <h2 class="task_list_title">My Cat List</h2>
+    <ul class="task_list">
+      <li class="active_list">Mewing at people</li>
+      <li>Scratching the couch</li>
+      <li>Throw up the food</li>
+    </ul>
+    <form action="">
+      <input 
+        type="text" 
+        class="new list"
+        placeholder="new list name"
+        aria-label="new list name"
+      />
+      <button class="btn list" 
+        aria-label="create new list"> + </button>
+
+    </form>
+    <div class="todo_list">
+      <div class="todo_header">
+        <h2 class="list_title">Mewing</h2>
+        <p class="task_count">2 tasks left</p>
+      </div>
+      <div class="todo_body">
+        <div class="tasks">
+          <div class="task">
+            <input 
+            type="checkbox"
+            id="task_1"
+            />
+            <label for="task_1">
+              <span class="custom_chechkbox">
+              </span>
+              record todo list
+            </label>
+          </div>
+          <!-- task 1 -->
+          <div class="task">
+            <input 
+            type="checkbox"
+            id="task_2"
+            />
+            <label for="task_2">
+              <span class="custom_chechkbox">
+              </span>
+              mew important task
+            </label>
+          </div>
+          <!-- task 2 -->
+          <div class="task">
+            <input 
+            type="checkbox"
+            id="task_3"
+            />
+            <label for="task_3">
+              <span class="custom_chechkbox">
+              </span>
+                conquer the world
+            </label>
+          </div>
+          <!-- task 3 -->
         </div>
-        <h5 id="Alert"></h5>
-        <ul id="list_items" class="list_items"></ul>
+        <!-- Task creator so i need to put things i want it to create aka the form -->
+        <div class="new_tasks_creator">
+          <form action="">
+            <input 
+              type="text" 
+              class="new list"
+              placeholder="new task name"
+              aria-label="new task name"
+            />
+            <button class="btn task" 
+              aria-label="create new task"> + </button>
+      
+          </form>
+        </div>
+        <div class="delete_todo">
+          <button class="delete btn">
+            clear completed tasks
+          </button>
+          <button class="delete btn">
+            delete list
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-
 </body>
 </html>

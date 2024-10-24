@@ -10,7 +10,7 @@
 <body class="bg-amber-200">
   <h1 class="title absolute text-5xl text-amber-100">TO-DO Listooooooo</h1>
   <div class="all_tasks flex h-screen justify-around items-center">
-    <div class="tasks_container flex flex-col gap-2 bg-amber-500 p-7">
+    <div class="tasks_container flex flex-col gap-2 bg-amber-400 p-7">
       <h2 class="task_list_title font-bold text-xl">My Cat List</h2>
       <ul class="task_list">
         <li class="active_list">Mewing at people</li>
@@ -18,7 +18,7 @@
         <li>Throw up the food</li>
       </ul>
       <form action="">
-        <button class="btn list bg-amber-300 rounded-full" 
+        <button class="btn list bg-amber-300 rounded-full px-1.5" 
           aria-label="create new list"> + </button>
         <input 
           type="text" 
@@ -32,7 +32,7 @@
     <div class="todo_list flex flex-col gap-2 bg-amber-500 p-7">
       <div class="todo_header">
         <h2 class="list_title font-bold text-xl">Mewing</h2>
-        <p class="task_count">2 tasks left</p>
+        <p class="task_count opacity-50">2 tasks left</p>
       </div>
       <div class="todo_body flex flex-col gap-2">
         <div class="tasks">
@@ -76,7 +76,7 @@
         <!-- Task creator so i need to put things i want it to create aka the form -->
         <div class="new_tasks_creator">
           <form action="">
-            <button class="btn task bg-amber-300 rounded-full" 
+            <button class="btn task bg-amber-300 rounded-full px-1.5" 
               aria-label="create new task"> + </button>
             <input 
               type="text" 
@@ -88,10 +88,10 @@
           </form>
         </div>
         <div class="delete_todo">
-          <button class="delete btn bg-amber-300 rounded-full">
+          <button class="delete btn bg-amber-300 rounded-full px-1">
             clear completed tasks
           </button>
-          <button class="delete btn bg-amber-300 rounded-full">
+          <button class="delete btn bg-amber-300 rounded-full px-1">
             delete list
           </button>
         </div>

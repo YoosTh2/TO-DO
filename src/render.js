@@ -1,22 +1,8 @@
 import { clearElement } from "./clear.js";
+import { lists } from "./saving.js";
 
 // MY DECLERATIONS ARE DOWN
 const containerList = document.querySelector("[data-lists]")
-const newListForm = document.querySelector("[data-new-list-form]")
-const newListInput = document.querySelector("[data-new-list-input]")
-
-
-// THE ARRAY IS DOWN
-export let lists = [
-//     {
-//     id: "1",
-//     name: "name"
-// },
-// {
-//     id: "2",
-//     name: "todo"
-// }
-]
 
 
 // FUNCTION IS DOWN

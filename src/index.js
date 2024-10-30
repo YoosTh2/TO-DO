@@ -1,14 +1,18 @@
 import { parse } from 'postcss';
 import './main.css';
 import './style.css';
-// import * as something from "./declarations.js"|
-console.log("just testing if it is working my index.js")
+// import * as something from "./declarations.js"
 // My Imports of functions/moduels are here
 import { clearElement } from "./clear.js";
 import { render } from "./render.js";
-import { createList } from "./listCreation";
-import { lists } from './render.js';
-console.log(createList())
+import { createList } from "./listCreation.js";
+import { lists } from './saving.js';
+import { save } from "./saving.js";
+// Calling function down
+function caller() {
+    save()
+    render()
+}
 
 // EVENT LISTENERS ARE DOWN
 const newListForm = document.querySelector("[data-new-list-form]")
@@ -21,9 +25,6 @@ newListForm.addEventListener("submit", e =>{
     const list = createList(listName)
     newListInput.value = null
     lists.push(list)
-    render()
+    caller()
 })
-
-
-// CALLS
-// render()
+render()

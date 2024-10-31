@@ -1,15 +1,19 @@
 import { clearElement } from "./clear.js";
 import { lists } from "./saving.js";
+import { caller } from "./index.js";
 
 // MY DECLERATIONS ARE DOWN
-const containerList = document.querySelector("[data-lists]")
-
+export const containerList = document.querySelector("[data-lists]")
+export const Local_Storage_Selected_List_Id_Key = 'task.selcetedListId';
+export let selcetedListId = localStorage.getItem(
+    Local_Storage_Selected_List_Id_Key
+);
 
 // FUNCTION IS DOWN
 export function render() {
     clearElement(containerList)
 // Iterates over each item in the 'lists' array
-lists.forEach(list => {
+    lists.forEach(list => {
     // Creates a new 'li' element for each item
     const listElement = document.createElement("li");
 
@@ -23,8 +27,27 @@ lists.forEach(list => {
     // Sets the text of the 'li' element to the current item in the 'lists' array
     listElement.innerText = list.name;
 
+    if (list.id === selcetedListId) {
+        listElement.classList.add("active_list")
+    }
+
     // Appends the new 'li' element to the 'containerList' element
     containerList.appendChild(listElement);
 });
-
 }
+
+containerList.addEventListener("click", e =>{
+    if(e.target.tagName.toLowerCase() === "li"){
+        selcetedListId = e.target.dataset.listId 
+        caller()
+    }
+})
+
+
+const deleteListBtn = document.querySelector("[data-delete-list-button]")
+deleteListBtn.addEventListener("click", e =>{
+    lists = lists.filter(list => list.id !== selcetedListId)
+    selcetedListId = null
+    caller()
+})
+

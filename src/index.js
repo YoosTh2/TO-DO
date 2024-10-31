@@ -1,15 +1,16 @@
-import { parse } from 'postcss';
+import { list, parse } from 'postcss';
 import './main.css';
 import './style.css';
 // import * as something from "./declarations.js"
 // My Imports of functions/moduels are here
 import { clearElement } from "./clear.js";
-import { render } from "./render.js";
+import { render, selcetedListId } from "./render.js";
 import { createList } from "./listCreation.js";
 import { lists } from './saving.js';
 import { save } from "./saving.js";
 // Calling function down
-function caller() {
+
+export function caller() {
     save()
     render()
 }
@@ -17,6 +18,7 @@ function caller() {
 // EVENT LISTENERS ARE DOWN
 const newListForm = document.querySelector("[data-new-list-form]")
 const newListInput = document.querySelector("[data-new-list-input]")
+
 
 newListForm.addEventListener("submit", e =>{
     e.preventDefault()
@@ -27,4 +29,7 @@ newListForm.addEventListener("submit", e =>{
     lists.push(list)
     caller()
 })
+
+
+
 render()

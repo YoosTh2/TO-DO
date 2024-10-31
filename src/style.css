@@ -102,3 +102,12 @@ body{
     transform: scaleX(1);
     transform-origin: left;
 }
+
+.active_list {
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+    /*transition: opacity 0.3s;*/ /* Smooth transition for opacity change */
+}
+  
+.active_list:hover {
+    opacity: 0.7; /* Changes the opacity when hovering*/
+} 

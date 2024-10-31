@@ -4,5 +4,4 @@ while (element.firstChild) {
     // Remove the first child from the element
     element.removeChild(element.firstChild);
 }
-
 }
